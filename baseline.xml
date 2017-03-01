@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-3.5"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-3.5 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="baseline" id="tables" runOnChange="true">
+        <sqlFile
+            dbms="mysql"
+            path="baseline/tables.sql"
+            encoding="utf8"
+            endDelimiter=";"
+            splitStatements="true"
+            relativeToChangelogFile="true"/>
+        <rollback />
+    </changeSet>
+    <changeSet author="baseline" id="views" runOnChange="true">
+        <sqlFile
+            dbms="mysql"
+            path="baseline/views.sql"
+            encoding="utf8"
+            endDelimiter=";"
+            splitStatements="true"
+            relativeToChangelogFile="true" />
+        <rollback />
+    </changeSet>
+    <changeSet author="baseline" id="routines" runOnChange="true">
+        <sqlFile
+            dbms="mysql"
+            path="baseline/routines.sql"
+            encoding="utf8"
+            endDelimiter="/"
+            splitStatements="true"
+            relativeToChangelogFile="true"/>
+        <rollback />
+    </changeSet>
+</databaseChangeLog>
